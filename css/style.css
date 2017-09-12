@@ -1,0 +1,292 @@
+/*
+    MoonCalc Gear Web App for calculating and displaying Age of the Moon, 
+    Phase of the Moon, and Distance from the Moon to the center of Earth. 
+    For residents of the Northern Hemisphere, the Southern Hemisphere, 
+    and the Equator.
+
+    Copyright (C) 2014-2017  A.V.T. Software (Sole Proprietorship Vita Tolstikova)
+
+    Licensed under the Flora License, Version 1.1 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://floralicense.org/license/
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+    Includes TAU (Tizen Advanced UI) Web UI library 
+
+    @author Andrei Tolstikov
+    @author Vita Tolstikova
+
+    contact website: https://software.avt.dn.ua
+    contact E-mail: support@software.avt.dn.ua
+*/
+
+* {
+    font-family: Verdana, Lucida Sans, Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0px auto;
+    background-color:#222;
+}
+
+.contents {
+    display: flex;
+    display: -webkit-flex;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    height:320px;
+}
+
+.content_text {
+    font-size:24px;
+    color:#fff;
+}
+
+
+/* 
+ * Classes and ID's for MoonCalc page (main page)
+ * id="page1-MoonCalc"
+ *
+ */
+  
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+#prev_date {
+    position:absolute;
+}
+
+#prev_date a {
+    display: block;
+    text-align:center;
+    vertical-align:baseline;
+    width:66px;
+    height:50px; 	
+    color:#fff;
+    background-color:#4B4237;
+    border-width: 1px;
+    border-color: #fff;
+    border-style: solid;
+}
+  
+#prev_date a:active {
+    background-color:#635D59;
+}
+  
+
+#moon_container {
+    width: 100px;
+    height: 100px;
+    position:absolute;
+}
+
+
+#next_date {
+    position:absolute;
+}
+
+ 
+   
+#next_date a{
+    display: block;
+    text-align:center; 
+    vertical-align:baseline; 	
+    width:66px;
+    height:50px; 
+    color:#fff;
+    background-color:#4B4237;
+    border-width: 1px;
+    border-color: #fff;
+    border-style: solid;	
+}
+   
+#next_date a:active {
+    background-color:#635D59;
+}   
+
+#curr_date {
+    font-size:24px;
+    color:#fff;  
+    text-align:center;
+}
+   
+   
+#hemisphere {
+    color:#FFFFFF;
+    font-size:20px;
+    font-weight:bold;
+    text-align: center;
+}
+   
+#age_of_moon {
+    font-size:22px;
+    color:#fff;
+    background-color: #494949;
+    text-align: left;
+    padding-top: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-bottom: 1px;
+    margin-top:5px;	
+}
+  
+#moon_phase {
+    color:#fff;
+    background-color: #1A1A1A;
+    text-align: left;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+  
+#moon_distance {
+    color:#fff;
+    background-color: #494949;
+    text-align: left;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+  
+#prefix {
+    font-size:22px;
+}  
+
+#suffix {
+    font-size:20px;
+}
+  
+#moon_distance {
+    color:#fff;
+    background-color: #494949;
+    font-size:20px;
+    text-align: left;
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-right: 1px;
+    padding-bottom: 2px;
+}
+  
+#now {
+    margin-top:10px;
+    position:relative;
+    top:0px;
+}
+   
+#now a{
+    display: block;
+    text-align:center; 
+    vertical-align:baseline; 	
+    width:110px;
+    height:50px; 
+    color:#fff;
+    background-color:#4B4237;
+    border-width: 1px;
+    border-color: #fff;
+    border-style: solid;
+}
+   
+#now a:active {
+  background-color:#635D59;
+}   
+   
+
+/* 
+ * Classes and ID's for About page 
+ * id="page2-About"
+ *
+ */
+ 
+#webapp_name {
+    color:#fff;
+    font-size:22px;
+    font-weight:bold;
+    margin-top:10px;
+    margin-bottom:3px;
+    text-align:center;
+}
+  
+#webapp_version {
+    color:#fff;
+    font-size:20px;
+    font-weight:bold;
+    text-align:center;
+}
+  
+#contact_info{
+    color:#fff;
+    margin-top:25px;
+    font-size:22px;
+    font-weight:bold;
+    text-align:center;	
+}
+  
+#contact_info div{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+  
+#avt_url a {
+  color:#FFFFFF;
+  text-shadow:none;
+  text-decoration:none; 
+}
+
+#avt_email a {
+    color:#FFFFFF;
+    text-shadow:none;
+    text-decoration:none; 
+}
+
+#user_agreement {
+    padding-top: 15px;
+    width:220px;
+    height:40px;
+    position:relative;
+    top:0px;
+}
+
+#user_agreement a {
+    display: block;
+    text-align:center; 
+    vertical-align:baseline; 	
+    width:220px;
+    height:40px; 
+    color:#fff;
+    background-color:#4B4237;
+    border-width: 1px;
+    border-color: #fff;
+    border-style: solid;
+    font-size: 24px;
+    font-weight: normal;
+}
+   
+#user_agreement a:active {
+  background-color:#635D59;
+}
+
+
+/* 
+ * Classes and ID's for User Agreement page 
+ * id=page3_UserAgreement 
+ *
+ */
+
+#user_agreement_info {
+    color:#fff;
+    font-size:22px;
+    text-align:left;
+    padding-left:3px;
+    padding-right:3px;
+    padding-top:10px;
+}
