@@ -87,7 +87,7 @@ MoonCalc Gear Web App v 1.3
 ------------------------------------------
 	
     v1.3
-        The current open source version for publish in GitHub.
+        The current open source version for publish on GitHub.
         New featurs/enhancements & bug-fixes:
             - Add the W3C Geolocation API (GeoIP) to determine the current user location.
             - Enhance calculating and displaying Age of the Moon, Phase of the Moon, 
