@@ -33,7 +33,7 @@ MoonCalc Gear Web App v 1.3
     has made a decision to publish the MoonCalc Gear Web App on GitHub 
     as an open source project.
     
-    In honor of the 15 anniversary of A.V.T. Company ( https://avt.dn.ua ).
+    In honor of the 15th Anniversary of A.V.T. Company ( https://avt.dn.ua ).
 
 
 2. Using MoonCalc Gear Web App
